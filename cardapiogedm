@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cardápio - GEDM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ff8c00;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('logogedm.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .menu-container {
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 100px;
+            height: auto;
+        }
+        .menu-title {
+            text-align: center;
+            font-size: 28px;
+            color: #ff8c00;
+            margin-bottom: 20px;
+        }
+        .menu-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .menu-item {
+            width: calc(50% - 10px);
+            padding: 20px;
+            background-color: #ffbe5c;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+        .item-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .item-price {
+            font-weight: bold;
+            color: #ff8c00;
+            margin-bottom: 10px;
+        }
+        .order-button {
+            background-color: #ff8c00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .order-button:hover {
+            background-color: #e87400;
+        }
+        .payment-details {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .payment-message {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .redirect-button {
+            background-color: #ff8c00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .redirect-button:hover {
+            background-color: #e87400;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <div class="logo">
+            <img src="logogedm.jpg" alt="Logo GEDM">
+        </div>
+        <h1 class="menu-title">Cardápio - GEDM</h1>
+
+        <div class="menu-section">
+            <div class="menu-item">
+                <div class="item-name">Trufas</div>
+                <div class="item-price">3 R$</div>
+                <button class="order-button" onclick="showPaymentDetails('Pix: 84988606864 - Brunno Ferreira de Oliveira Santos')">Pedir</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">Brownie</div>
+                <div class="item-price">4 R$</div>
+                <button class="order-button" onclick="showPaymentDetails('Pix: 84988606864 - Brunno Ferreira de Oliveira Santos')">Pedir</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">Cremosinhos</div>
+                <div class="item-price">2.5 R$</div>
+                <button class="order-button" onclick="showPaymentDetails('Pix: 84988606864 - Brunno Ferreira de Oliveira Santos')">Pedir</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">Cookies</div>
+                <div class="item-price">3 R$</div>
+                <button class="order-button" onclick="showPaymentDetails('Pix: 84988606864 - Brunno Ferreira de Oliveira Santos')">Pedir</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">Pastilhas</div>
+                <div class="item-price">1 R$</div>
+                <button class="order-button" onclick="showPaymentDetails('Pix: 84988606864 - Brunno Ferreira de Oliveira Santos')">Pedir</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">Salgado</div>
+                <div class="item-price">3 R$</div>
+                <button class="order-button" onclick="showPaymentDetails('Pix: 84988606864 - Brunno Ferreira de Oliveira Santos')">Pedir</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">Pichula</div>
+                <div class="item-price">2 R$</div>
+                <button class="order-button" onclick="showPaymentDetails('Pix: 84988606864 - Brunno Ferreira de Oliveira Santos')">Pedir</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">Brownie + Pichula</div>
+                <div class="item-price">5.50 R$</div>
+                <button class="order-button" onclick="showPaymentDetails('Pix: 84988606864 - Brunno Ferreira de Oliveira Santos')">Pedir</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">Salgado + Pichula</div>
+                <div class="item-price">5.50 R$</div>
+                <button class="order-button" onclick="showPaymentDetails('Pix: 84988606864 - Brunno Ferreira de Oliveira Santos')">Pedir</button>
+            </div>
+            <div class="menu-item">
+                <div class="item-name">2x Salgado</div>
+                <div class="item-price">5.00 R$</div>
+                <button class="order-button" onclick="showPaymentDetails('Pix: 84988606864 - Brunno Ferreira de Oliveira Santos')">Pedir</button>
+            </div>
+        </div>
+
+        <div class="payment-details" id="paymentDetails">
+            <div class="payment-message" id="paymentMessage">
+                <!-- Mensagem Pix será inserida aqui após o clique no botão de pedido -->
+            </div>
+            <a href="https://wa.me/+5584988606864" target="_blank" class="redirect-button">Enviar Comprovante via WhatsApp</a>
+        </div>
+    </div>
+
+    <script>
+        function showPaymentDetails(paymentMessage) {
+            const paymentDetails = document.getElementById('paymentDetails');
+            const paymentMessageElement = document.getElementById('paymentMessage');
+
+            paymentMessageElement.textContent = paymentMessage;
+            paymentDetails.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
